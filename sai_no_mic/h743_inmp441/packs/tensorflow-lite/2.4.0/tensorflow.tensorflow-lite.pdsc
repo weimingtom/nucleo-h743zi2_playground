@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package schemaVersion="1.6" 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="PACK.xsd">
+  <vendor>tensorflow</vendor>
+  <name>tensorflow-lite</name>
+  <description>Deep learning framework for on-device inference.</description>
+  <!-- web download link -->
+  <url>https://github.com/MDK-Packs/Pack/raw/master/TensorFlow/</url>
+  <license>LICENSE</license>
+  <releases>
+    <release version="2.4.0" date="2020-09-07">
+      TensorFlow 2.4.0
+    </release>
+  </releases>
+  <taxonomy>
+    <description Cclass="Machine Learning">Software Components for Machine Learning</description>
+  </taxonomy>
+  <components>
+    <component Cclass="Machine Learning" Cgroup="TensorFlow" Csub="Core" Cversion="2.4.0">
+      <description>TensorFlow Lite Micro Library</description>
+      <RTE_Components_h>
+        <!-- the following content goes into file 'RTE_Components.h' -->
+        #define RTE_ML_TF_LITE     /* TF */
+      </RTE_Components_h>
+      <files>
+                <file category="header" name="tensorflow/core/public/version.h"/> 
+        <file category="header" name="tensorflow/lite/c/builtin_op_data.h"/> 
+        <file category="sourceC" name="tensorflow/lite/c/common.c"/> 
+        <file category="header" name="tensorflow/lite/c/common.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/core/api/error_reporter.cc"/> 
+        <file category="header" name="tensorflow/lite/core/api/error_reporter.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/core/api/flatbuffer_conversions.cc"/> 
+        <file category="header" name="tensorflow/lite/core/api/flatbuffer_conversions.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/core/api/op_resolver.cc"/> 
+        <file category="header" name="tensorflow/lite/core/api/op_resolver.h"/> 
+        <file category="header" name="tensorflow/lite/core/api/profiler.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/core/api/tensor_utils.cc"/> 
+        <file category="header" name="tensorflow/lite/core/api/tensor_utils.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/common.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/compatibility.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/cppmath.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/max.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/min.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/optimized/neon_check.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/portable_tensor.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/kernels/internal/quantization_util.cc"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/quantization_util.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/add.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/arg_min_max.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/binary_function.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/ceil.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/comparisons.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/concatenation.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/conv.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/depthwiseconv_float.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/depthwiseconv_uint8.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/dequantize.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/floor.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/fully_connected.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/hard_swish.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/integer_ops/add.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/integer_ops/conv.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/integer_ops/depthwise_conv.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/integer_ops/fully_connected.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/integer_ops/l2normalization.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/integer_ops/logistic.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/integer_ops/mul.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/integer_ops/pooling.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/integer_ops/tanh.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/l2normalization.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/logistic.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/maximum_minimum.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/mul.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/neg.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/pad.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/pooling.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/prelu.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/process_broadcast_shapes.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/quantize.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/reduce.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/requantize.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/resize_nearest_neighbor.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/round.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/softmax.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/strided_slice.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/sub.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/reference/tanh.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/strided_slice_logic.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/tensor_ctypes.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/internal/types.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/kernels/kernel_util.cc"/> 
+        <file category="header" name="tensorflow/lite/kernels/kernel_util.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/op_macros.h"/> 
+        <file category="header" name="tensorflow/lite/kernels/padding.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/all_ops_resolver.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/all_ops_resolver.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/benchmarks/keyword_scrambled_model_data.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/benchmarks/keyword_scrambled_model_data.h"/> 
+        <file category="header" name="tensorflow/lite/micro/compatibility.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/debug_log.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/debug_log.h"/> 
+        <file category="header" name="tensorflow/lite/micro/kernels/activation_utils.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/activations.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/add.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/arg_min_max.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/ceil.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/circular_buffer.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/comparisons.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/concatenation.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/conv.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/depthwise_conv.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/dequantize.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/elementwise.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/ethosu.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/floor.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/fully_connected.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/hard_swish.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/kernel_runner.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/kernels/kernel_runner.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/kernel_util.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/kernels/kernel_util.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/l2norm.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/logical.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/logistic.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/maximum_minimum.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/kernels/micro_ops.h"/> 
+        <file category="header" name="tensorflow/lite/micro/kernels/micro_utils.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/mul.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/neg.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/pack.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/pad.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/pooling.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/prelu.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/quantize.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/reduce.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/reshape.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/resize_nearest_neighbor.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/round.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/softmax.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/split.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/strided_slice.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/sub.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/svdf.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/tanh.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/kernels/unpack.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/memory_helpers.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/memory_helpers.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/memory_planner/greedy_memory_planner.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/memory_planner/greedy_memory_planner.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/memory_planner/linear_memory_planner.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/memory_planner/linear_memory_planner.h"/> 
+        <file category="header" name="tensorflow/lite/micro/memory_planner/memory_planner.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/micro_allocator.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/micro_allocator.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/micro_error_reporter.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/micro_error_reporter.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/micro_interpreter.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/micro_interpreter.h"/> 
+        <file category="header" name="tensorflow/lite/micro/micro_mutable_op_resolver.h"/> 
+        <file category="header" name="tensorflow/lite/micro/micro_op_resolver.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/micro_optional_debug_tools.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/micro_optional_debug_tools.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/micro_profiler.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/micro_profiler.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/micro_string.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/micro_string.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/micro_time.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/micro_time.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/micro_utils.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/micro_utils.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/recording_micro_allocator.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/recording_micro_allocator.h"/> 
+        <file category="header" name="tensorflow/lite/micro/recording_micro_interpreter.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/recording_simple_memory_allocator.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/recording_simple_memory_allocator.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/simple_memory_allocator.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/simple_memory_allocator.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/test_helpers.cc"/> 
+        <file category="header" name="tensorflow/lite/micro/test_helpers.h"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/testing/test_conv_model.cc"/> 
+        <file category="sourceCpp" name="tensorflow/lite/micro/testing/test_utils.cc"/> 
+        <file category="header" name="tensorflow/lite/portable_type_to_tflitetype.h"/> 
+        <file category="header" name="tensorflow/lite/schema/schema_generated.h"/> 
+        <file category="header" name="tensorflow/lite/version.h"/> 
+
+        <file category="include" name="./"/>
+      </files>
+    </component>
+    <component Cclass="Machine Learning" Cgroup="TensorFlow" Csub="Testing" Cversion="2.4.0">
+      <description>TensorFlow Lite Micro Library</description>
+      <RTE_Components_h>
+        <!-- the following content goes into file 'RTE_Components.h' -->
+        #define RTE_ML_TF_LITE     /* TF */
+      </RTE_Components_h>
+      <files>
+                <file category="header" name="tensorflow/lite/micro/testing/micro_test.h"/> 
+        <file category="header" name="tensorflow/lite/micro/testing/test_conv_model.h"/> 
+        <file category="header" name="tensorflow/lite/micro/testing/test_utils.h"/> 
+
+        <file category="include" name="./"/>
+      </files>
+    </component>
+
+  </components>
+</package>
